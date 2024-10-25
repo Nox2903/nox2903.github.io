@@ -1,1 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Portfolio</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background parallax effect */
+        body {
+            background-image: url('background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            cursor: none; /* Hide default cursor */
+            overflow-x: hidden;
+        }
+        
+        /* Navbar styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
 
+        /* Profile section styling */
+        #profile-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        #profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Card hover effect */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animate text on hover */
+        .card-title {
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-title {
+            color: #ffc107;
+        }
+
+        /* Particle cursor styling */
+        .particle {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ffc107;
+            pointer-events: none;
+            opacity: 0.8;
+            transform: translate(-50%, -50%);
+            animation: particle-move 0.8s ease-out;
+            z-index: 9999; /* Ensuring the particles stay on top */
+        }
+
+        @keyframes particle-move {
+            from {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(0.3);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Music Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#profile-section">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio-header">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile-section" class="container my-5 text-center">
+        <img src="profile.jpg" alt="Profile Picture" id="profile-pic">
+        <h2 class="mt-3">Arya Yudistira Pratama</h2>
+        <p class="lead">Sound Artist</p>
+        <p>Explore my music collection and discover a world of sound crafted with passion and creativity. Click on any track below to listen and enjoy!</p>
+    </section>
+
+    <!-- Portfolio Header -->
+    <header id="portfolio-header" class="text-white text-center py-5">
+        <h1>My Music Portfolio</h1>
+        <p class="lead">Discover my latest musical creations</p>
+        <a href="https://www.fiverr.com/shaneensophia/make-background-music-for-your-vtuber-livestreams-or-games" class="btn btn-primary" target="_blank">More of My Creations</a>
+    </header>
+
+    <!-- Featured Tracks Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Tracks</h2>
+        <div class="row">
+            <!-- Music track cards here as per original content -->
+            
+            <!-- Dynamic list of music tracks -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Mystery Intro</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/mystery intro music.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Trailer Intense</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/trailer intense.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Dancing Star</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/dancing star.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Veronica</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/Veronica.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Dancing Clown</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/dancing clown.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Electro Swing</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/electro swing.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Elevator</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/elevator.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Flashback</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/flashback.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Lo Fi Night</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/lo fi night.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Magical Tale</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/magical tale.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Me Time</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/me time.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Romance Score</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/romance score.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Silent Hill</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/silent hill.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Silly</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/silly.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Sneaky</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/sneaky.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Woomyfoxy Clownish</h5>
+                        <audio controls loop class="w-100">
+                            <source src="music/woomyfoxy clownish.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button at the bottom -->
+            <div class="text-center mt-4">
+                <a href="https://www.fiverr.com/shaneensophia/make-background-music-for-your-vtuber-livestreams-or-games" class="btn btn-primary" target="_blank">More of My Creations</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="text-white text-center py-3">
+        <p>&copy; 2024 Arya Yudistira Pratama. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Particle Cursor JavaScript -->
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${e.clientX}px`;
+            particle.style.top = `${e.clientY}px`;
+            document.body.appendChild(particle);
+
+            // Hapus partikel setelah 0.8 detik
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        });
+    </script>
+</body>
+</html>
