@@ -377,6 +377,14 @@
                 particle.remove();
             }, 800);
         });
+        
+        // Reveal sections on scroll
+        document.addEventListener("scroll", function() {
+            const profileSection = document.querySelector("#profile-section");
+            if (window.scrollY > 100) {
+                profileSection.classList.add("show-on-scroll");
+            }
+        });
     </script>
 </body>
 </html>
