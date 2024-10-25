@@ -14,10 +14,10 @@
             background-size: cover;
             background-repeat: no-repeat;
             color: white;
-            cursor: none;
+            cursor: none; /* Hide default cursor */
             overflow-x: hidden;
         }
-
+        
         /* Navbar styling */
         .navbar {
             background-color: rgba(0, 0, 0, 0.85);
@@ -36,15 +36,6 @@
             border-radius: 10px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        /* Show section on scroll */
-        .show-on-scroll {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         #profile-pic {
@@ -55,17 +46,23 @@
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
         }
 
-        /* Testimonials Section */
-        #testimonials {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 50px;
-            border-radius: 10px;
+        /* Card hover effect */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .testimonial {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animate text on hover */
+        .card-title {
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-title {
+            color: #ffc107;
         }
 
         /* Particle cursor styling */
@@ -79,7 +76,7 @@
             opacity: 0.8;
             transform: translate(-50%, -50%);
             animation: particle-move 0.8s ease-out;
-            z-index: 9999;
+            z-index: 9999; /* Ensuring the particles stay on top */
             box-shadow: 0 0 10px rgba(7, 127, 255, 0.8), 0 0 20px rgba(7, 127, 255, 0.6), 0 0 30px rgba(7, 127, 255, 0.4);
         }
 
@@ -94,9 +91,15 @@
             }
         }
 
-        /* Footer Styling */
+        /* Footer Contact Section Styling */
+        .footer-contact {
+            font-size: 1.1rem;
+            color: #ffc107;
+        }
+
+        /* Footer Background for Better Readability */
         footer {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
             padding: 2rem;
             border-top: 1px solid #ffc107;
         }
@@ -114,7 +117,6 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#profile-section">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="#track-section">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                 <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
             </ul>
         </div>
@@ -127,6 +129,14 @@
         <p class="lead">Sound Artist</p>
         <p>Explore my music collection and discover a world of sound crafted with passion and creativity. Click on any track below to listen and enjoy!</p>
     </section>
+
+    <!-- Portfolio Header -->
+    <header id="portfolio-header" class="text-white text-center py-5">
+        <h1>My Music Portfolio</h1>
+        <p class="lead">Discover my latest musical creations</p>
+        <a href="https://www.fiverr.com/shaneensophia/make-background-music-for-your-vtuber-livestreams-or-games" class="btn btn-primary" target="_blank">More of My Creations</a>
+    </header>
+
     <section id="track-section" class="container my-5 text-center">
     <div class="container my-5">
         <h2 class="text-center mb-4">Featured Tracks</h2>
@@ -347,6 +357,7 @@
         </div>
     </footer>
 
+
     <!-- Link to Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -357,22 +368,14 @@
         document.addEventListener('mousemove', function(e) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
-            particle.style.left = `${e.clientX}px`;
-            particle.style.top = `${e.clientY}px`;
+            particle.style.left = ${e.clientX}px;
+            particle.style.top = ${e.clientY}px;
             document.body.appendChild(particle);
 
             // Hapus partikel setelah 0.8 detik
             setTimeout(() => {
                 particle.remove();
             }, 800);
-        });
-
-        // Reveal sections on scroll
-        document.addEventListener("scroll", function() {
-            const profileSection = document.querySelector("#profile-section");
-            if (window.scrollY > 100) {
-                profileSection.classList.add("show-on-scroll");
-            }
         });
     </script>
 </body>
