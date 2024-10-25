@@ -363,20 +363,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Particle Cursor JavaScript -->
-    <script>
-        document.addEventListener('mousemove', function(e) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            particle.style.left = ${e.clientX}px;
-            particle.style.top = ${e.clientY}px;
-            document.body.appendChild(particle);
+<script>
+    document.addEventListener('mousemove', function(e) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = `${e.clientX}px`; // Gunakan backtick ``
+        particle.style.top = `${e.clientY}px`;
+        document.body.appendChild(particle);
 
-            // Hapus partikel setelah 0.8 detik
-            setTimeout(() => {
-                particle.remove();
-            }, 800);
-        });
-    </script>
+        // Hapus partikel setelah 0.8 detik
+        setTimeout(() => {
+            particle.remove();
+        }, 800);
+    });
+</script>
+
 </body>
 </html>
