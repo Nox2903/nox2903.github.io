@@ -20,7 +20,13 @@
         
         /* Navbar styling */
         .navbar {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand, .nav-link {
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         /* Profile section styling */
@@ -62,15 +68,16 @@
         /* Particle cursor styling */
         .particle {
             position: fixed;
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background-color: #077fff;
+            background-color: rgba(7, 127, 255, 0.7);
             pointer-events: none;
             opacity: 0.8;
             transform: translate(-50%, -50%);
             animation: particle-move 0.8s ease-out;
             z-index: 9999; /* Ensuring the particles stay on top */
+            box-shadow: 0 0 10px rgba(7, 127, 255, 0.8), 0 0 20px rgba(7, 127, 255, 0.6), 0 0 30px rgba(7, 127, 255, 0.4);
         }
 
         @keyframes particle-move {
@@ -79,9 +86,15 @@
                 opacity: 1;
             }
             to {
-                transform: translate(-50%, -50%) scale(0.3);
+                transform: translate(-50%, -50%) scale(0.5);
                 opacity: 0;
             }
+        }
+
+        /* Footer Contact Section Styling */
+        .footer-contact {
+            font-size: 1.1rem;
+            color: #ffc107;
         }
     </style>
 </head>
@@ -118,7 +131,6 @@
     </header>
 
     <!-- Featured Tracks Section -->
-     
     <section id="track-section" class="container my-5 text-center">
     <div class="container my-5">
         <h2 class="text-center mb-4">Featured Tracks</h2>
@@ -326,8 +338,19 @@
     </div>
 </section>
 
-    <footer id="footer" class="text-white text-center py-3">
+    <!-- Footer with Contact Information -->
+    <footer id="footer" class="text-white text-center py-4">
         <p>&copy; 2024 Arya Yudistira Pratama. All rights reserved.</p>
+        <div class="footer-contact">
+            <p>Contact Information:</p>
+            <p>Email: arya.yudistira@example.com | Phone: +62 812-3456-7890</p>
+            <p>Follow me on social media:</p>
+            <p>
+                <a href="https://instagram.com/arya_music" class="text-decoration-none text-warning">Instagram</a> |
+                <a href="https://twitter.com/arya_music" class="text-decoration-none text-warning">Twitter</a> |
+                <a href="https://www.linkedin.com/in/aryamusic" class="text-decoration-none text-warning">LinkedIn</a>
+            </p>
+        </div>
     </footer>
 
     <!-- Link to Bootstrap JS and dependencies -->
