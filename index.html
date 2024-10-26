@@ -369,21 +369,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-    document.addEventListener('mousemove', function(e) {
+// Fungsi untuk membuat partikel pada posisi kursor
+function createParticles(x, y) {
     // Membuat beberapa partikel kecil yang menyerupai kristal atau bintang
     for (let i = 0; i < 3; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         
         // Posisi acak di sekitar kursor
-        const offsetX = (Math.random() - 0.5) * 10;
-        const offsetY = (Math.random() - 0.5) * 10;
+        const offsetX = (Math.random() - 0.5) * 20;
+        const offsetY = (Math.random() - 0.5) * 20;
 
-        particle.style.left = `${e.clientX + offsetX}px`;
-        particle.style.top = `${e.clientY + offsetY}px`;
+        particle.style.left = `${x + offsetX}px`;
+        particle.style.top = `${y + offsetY}px`;
 
-        // Ukuran acak lebih kecil untuk setiap partikel
-        const size = Math.random() * 4 + 2; // Ukuran antara 2px hingga 6px
+        // Ukuran acak untuk setiap partikel (sedikit lebih besar)
+        const size = Math.random() * 10 + 5; // Ukuran antara 5px hingga 15px
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
 
@@ -394,7 +395,24 @@
             particle.remove();
         }, 800);
     }
+}
+
+// Menyimpan posisi terakhir kursor
+let lastX = window.innerWidth / 2;
+let lastY = window.innerHeight / 2;
+
+// Mendengarkan pergerakan mouse untuk memperbarui posisi kursor
+document.addEventListener('mousemove', function(e) {
+    lastX = e.clientX;
+    lastY = e.clientY;
+    createParticles(lastX, lastY);
 });
+
+// Membuat partikel secara berkala, meskipun kursor tidak bergerak
+setInterval(() => {
+    createParticles(lastX, lastY);
+}, 300); // Partikel muncul setiap 300ms
+
 
 
 </script>
