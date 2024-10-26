@@ -64,20 +64,19 @@
         .card:hover .card-title {
             color: #ffc107;
         }
-
-        /* Partikel untuk efek Fairy Dust */
+/* Partikel untuk efek kristal atau bintang */
 .particle {
     position: fixed;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 223, 0, 0.8) 0%, rgba(255, 0, 255, 0.8) 100%);
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(173, 216, 230, 0.8) 70%, rgba(0, 0, 255, 0.5) 100%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.9;
     transform: translate(-50%, -50%);
-    animation: particle-move 1s ease-out forwards;
-    filter: blur(3px);
-    box-shadow: 0 0 10px rgba(255, 223, 0, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.5);
+    animation: particle-move 0.8s ease-out forwards;
+    filter: blur(1px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(173, 216, 230, 0.5), 0 0 30px rgba(0, 0, 255, 0.3);
     z-index: 9999; /* Memastikan partikel tetap di atas */
 }
 
@@ -88,10 +87,11 @@
         opacity: 1;
     }
     to {
-        transform: translate(-50%, -50%) scale(1.5);
+        transform: translate(-50%, -50%) scale(0.6);
         opacity: 0;
     }
 }
+
 
 
         /* Footer Contact Section Styling */
@@ -368,31 +368,32 @@
 
 <script>
     document.addEventListener('mousemove', function(e) {
-    // Membuat beberapa partikel sekaligus untuk efek "fairy dust"
-    for (let i = 0; i < 5; i++) {
+    // Membuat beberapa partikel kecil yang menyerupai kristal atau bintang
+    for (let i = 0; i < 3; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         
         // Posisi acak di sekitar kursor
-        const offsetX = (Math.random() - 0.5) * 20;
-        const offsetY = (Math.random() - 0.5) * 20;
+        const offsetX = (Math.random() - 0.5) * 10;
+        const offsetY = (Math.random() - 0.5) * 10;
 
-        particle.style.left = `${e.clientX + offsetX}px`; 
+        particle.style.left = `${e.clientX + offsetX}px`;
         particle.style.top = `${e.clientY + offsetY}px`;
 
-        // Ukuran acak untuk setiap partikel
-        const size = Math.random() * 8 + 5; // Ukuran antara 5px hingga 13px
+        // Ukuran acak lebih kecil untuk setiap partikel
+        const size = Math.random() * 4 + 2; // Ukuran antara 2px hingga 6px
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
 
         document.body.appendChild(particle);
 
-        // Hapus partikel setelah 1 detik
+        // Hapus partikel setelah 0.8 detik
         setTimeout(() => {
             particle.remove();
-        }, 1000);
+        }, 800);
     }
 });
+
 
 </script>
 
