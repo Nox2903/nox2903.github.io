@@ -60,6 +60,7 @@
             /* Memastikan kartu penuh dalam kolom */
             display: flex;
             flex-direction: column;
+            cursor: pointer;
         }
 
         .card:hover {
@@ -82,6 +83,35 @@
             flex-direction: column;
             justify-content: space-between;
             /* Mengatur jarak konten di dalam kartu */
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 300px;
+            /* Anda bisa sesuaikan tinggi sesuai kebutuhan */
+            object-fit: cover;
+            /* Menjaga proporsi gambar */
+        }
+
+        .card-role {
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-style: italic;
+            /* Memberikan gaya miring agar terlihat berbeda */
+            margin-bottom: 0.5rem;
+            /* Spasi antara role dan deskripsi utama */
+        }
+
+        .card-link {
+            text-decoration: none;
+            /* Hilangkan garis bawah pada link */
+        }
+
+
+        .card-title,
+        .card-text,
+        .btn {
+            margin-bottom: 0.5rem;
         }
 
         /* Partikel untuk efek kristal atau bintang */
@@ -396,36 +426,57 @@
         <div class="row">
             <!-- Game Card 1 -->
             <div class="col-md-4 mb-4">
-                <div class="card h-100 bg-dark text-white">
-                    <img src="EAN Icon.png" class="card-img-top" alt="Game Image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Everything About Nightmare</h5>
-                        <p class="card-text">Tells the story of a little girl named Alita who was initially sleeping in
-                            her room, but in a semi-conscious state, she was suddenly kidnapped by a large and scary
-                            monster. Without knowing what happened, Alita suddenly woke up in a dark house, requiring
-                            Alita to get out of the house by going through several puzzles and hiding from the monster.
-                        </p>
-                        <a href="https://okelahiniaja.itch.io/everything-about-nightmare" class="btn btn-primary"
-                            target="_blank">Play on itch.io</a>
+                <a href="https://okelahiniaja.itch.io/everything-about-nightmare" target="_blank" class="card-link">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="EAN Icon.png" class="card-img-top" alt="Game Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Everything About Nightmare</h5>
+                            <p class="card-role">Role : Programmer & Sound Artist</p>
+                            <p class="card-text">Tells the story of a little girl named Alita who was initially sleeping
+                                in her room, but in a semi-conscious state, she was suddenly kidnapped by a large and
+                                scary monster. Without knowing what happened, Alita suddenly woke up in a dark house,
+                                requiring Alita to get out of the house by going through several puzzles and hiding from
+                                the monster.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Game Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card h-100 bg-dark text-white">
-                    <img src="YTP icon.png" class="card-img-top" alt="Game Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">You're The Prey</h5>
-                        <p class="card-text">They call it "the Thing," but that's only because there's no other way to
-                            describe it. It looks like a duck, it moves like a duck, but one glance and you know—it’s
-                            not a duck. Its beak curls into something that resembles a grin, lined with teeth so sharp
-                            they look more like slivers of broken glass. Its eyes… a searing red, hollow, as if peering
-                            straight into you, lingering too long.</p>
-                        <a href="https://imfeelingood.itch.io/youre-the-prey" class="btn btn-primary"
-                            target="_blank">Play on itch.io</a>
+                <a href="https://imfeelingood.itch.io/youre-the-prey" target="_blank" class="card-link">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="YTP icon.png" class="card-img-top" alt="Game Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title">You're The Prey</h5>
+                            <p class="card-role">Role : Sound Artist</p>
+                            <p class="card-text">They call it "the Thing," but that's only because there's no other way
+                                to describe it. It looks like a duck, it moves like a duck, but one glance and you
+                                know—it’s not a duck. Its beak curls into something that resembles a grin, lined with
+                                teeth so sharp they look more like slivers of broken glass. Its eyes… a searing red,
+                                hollow, as if peering straight into you, lingering too long.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="col-md-4 mb-4">
+                <a href="https://youtu.be/0WZ9cRmYntw" target="_blank" class="card-link">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="AOP icon.png" class="card-img-top" alt="Game Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Ashes Of Polyhymnia</h5>
+                            <p class="card-role">Role : Programmer & Sound Artist</p>
+                            <p class="card-text">Tells the story of a group of musicians in the post-modern era who feel
+                                that the world seems empty and happiness is hard to attain. This group of musicians
+                                shares a common goal: to bring color and joy to the world. However, they face challenges
+                                in doing so, as depression has taken over a large part of society. As a result, they
+                                travel back in time with a mission to prevent the sadness and emptiness that will engulf
+                                the future by performing classic songs.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
 
             <!-- Add more game cards as needed -->
