@@ -6,8 +6,23 @@
     <title>Arya's Portfolio</title>
     <!-- Link to Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-GfnVZVbHKKCIk5Z1t9FY0kHgkHQDhDhnfvK9ikZjJDONSczRUSGGQj66sk6y7O/2pguXr2u8PEi1WxD6XgRPyA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style>
+
+        * {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
         /* Background parallax effect */
         body {
             background-image: url('background.jpg');
@@ -447,14 +462,14 @@ setInterval(() => {
     createParticles(lastX, lastY);
 }, 300); // Partikel muncul setiap 300ms
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-GfsdooxDfI5j4AjoB7ZtP74lB3Sa5zTYk0jHg7+6urcvbd6zOk0ASjNzOM7zKCVTLkK7SnRH1P7rReoNwG3EMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
 // AOS initialization
 AOS.init({
-    duration: 800,
-    once: true,
-});
+  duration: 1200,
+})
 
 
 
