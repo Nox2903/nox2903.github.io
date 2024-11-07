@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arya's Portfolio</title>
+    <title>My Music Portfolio</title>
     <!-- Link to Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -111,32 +111,19 @@
 <body>
 
     <!-- Navbar -->
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Arya's Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#profile-section">Profile</a></li>
-            
-            <!-- Dropdown for Portfolio -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Portfolio
-                </a>
-                <div class="dropdown-menu" aria-labelledby="portfolioDropdown">
-                    <a class="dropdown-item" href="#track-section">Music Portfolio</a>
-                    <a class="dropdown-item" href="#game-portfolio-section">Game Portfolio</a>
-                </div>
-            </li>
-
-            <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Music Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#profile-section">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#track-section">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Profile Section -->
     <section id="profile-section" class="container my-5 text-center">
@@ -160,7 +147,9 @@
         <h2 class="text-center mb-4">Featured Tracks</h2>
         <div class="row">
             <!-- Music track cards here as per original content -->
-            <div class="col-md-4 mb-4">
+            
+            <!-- Dynamic list of music tracks -->
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Mystery Intro</h5>
@@ -172,8 +161,7 @@
                 </div>
             </div>
 
-
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Trailer Intense</h5>
@@ -185,7 +173,7 @@
                 </div>
             </div>
             
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Dancing Star</h5>
@@ -197,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Veronica</h5>
@@ -209,7 +197,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Dancing Clown</h5>
@@ -221,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Electro Swing</h5>
@@ -233,7 +221,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Elevator</h5>
@@ -245,7 +233,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Flashback</h5>
@@ -257,7 +245,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Lo Fi Night</h5>
@@ -269,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Magical Tale</h5>
@@ -281,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Me Time</h5>
@@ -293,7 +281,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Romance Score</h5>
@@ -305,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Silent Hill</h5>
@@ -317,7 +305,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Silly</h5>
@@ -329,7 +317,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-right">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Sneaky</h5>
@@ -341,7 +329,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-left">
                 <div class="card h-100 bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Woomyfoxy Clownish</h5>
@@ -366,25 +354,25 @@
     <h2 class="text-center mb-4">Featured Games</h2>
     <div class="row">
         <!-- Game Card 1 -->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
             <div class="card h-100 bg-dark text-white">
-                <img src="EAN Icon.png" class="card-img-top" alt="Game Image 1">
+                <img src="path/to/your-game-image1.jpg" class="card-img-top" alt="Game Image 1">
                 <div class="card-body">
-                    <h5 class="card-title">Everything About Nightmare</h5>
-                    <p class="card-text">Tells the story of a little girl named Alita who was initially sleeping in her room, but in a semi-conscious state, she was suddenly kidnapped by a large and scary monster. Without knowing what happened, Alita suddenly woke up in a dark house, requiring Alita to get out of the house by going through several puzzles and hiding from the monster.</p>
-                    <a href="https://okelahiniaja.itch.io/everything-about-nightmare" class="btn btn-primary" target="_blank">Play on itch.io</a>
+                    <h5 class="card-title">Game Title 1</h5>
+                    <p class="card-text">Brief description of the game goes here, explaining the genre, main features, or any unique aspects.</p>
+                    <a href="https://yourusername.itch.io/yourgame1" class="btn btn-primary" target="_blank">Play on itch.io</a>
                 </div>
             </div>
         </div>
 
         <!-- Game Card 2 -->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
             <div class="card h-100 bg-dark text-white">
-                <img src="YTP icon.png" class="card-img-top" alt="Game Image 2">
+                <img src="path/to/your-game-image2.jpg" class="card-img-top" alt="Game Image 2">
                 <div class="card-body">
-                    <h5 class="card-title">You're The Prey</h5>
-                    <p class="card-text">They call it "the Thing," but that's only because there's no other way to describe it. It looks like a duck, it moves like a duck, but one glance and you know—it’s not a duck. Its beak curls into something that resembles a grin, lined with teeth so sharp they look more like slivers of broken glass. Its eyes… a searing red, hollow, as if peering straight into you, lingering too long.</p>
-                    <a href="https://imfeelingood.itch.io/youre-the-prey" class="btn btn-primary" target="_blank">Play on itch.io</a>
+                    <h5 class="card-title">Game Title 2</h5>
+                    <p class="card-text">Brief description of the game goes here, explaining the genre, main features, or any unique aspects.</p>
+                    <a href="https://yourusername.itch.io/yourgame2" class="btn btn-primary" target="_blank">Play on itch.io</a>
                 </div>
             </div>
         </div>
@@ -457,6 +445,12 @@ document.addEventListener('mousemove', function(e) {
 setInterval(() => {
     createParticles(lastX, lastY);
 }, 300); // Partikel muncul setiap 300ms
+
+// AOS initialization
+AOS.init({
+    duration: 800,
+    once: true,
+});
 
 
 
