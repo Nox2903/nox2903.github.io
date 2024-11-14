@@ -8,6 +8,16 @@
     <!-- Link to Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .modal-content {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            border: none;
+        }
+
+        .modal-header .close {
+            color: white;
+        }
+
         /* Background parallax effect */
         body {
             background-image: url('background.jpg');
@@ -424,63 +434,164 @@
     <section id="game-portfolio-section" class="container my-5 text-center">
         <h2 class="text-center mb-4">Featured Games</h2>
         <div class="row">
+
             <!-- Game Card 1 -->
             <div class="col-md-4 mb-4">
-                <a href="https://okelahiniaja.itch.io/everything-about-nightmare" target="_blank" class="card-link">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="EAN Icon.png" class="card-img-top" alt="Game Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Everything About Nightmare</h5>
-                            <p class="card-role">Role : Programmer & Sound Artist</p>
-                            <p class="card-text">Tells the story of a little girl named Alita who was initially sleeping
-                                in her room, but in a semi-conscious state, she was suddenly kidnapped by a large and
-                                scary monster. Without knowing what happened, Alita suddenly woke up in a dark house,
-                                requiring Alita to get out of the house by going through several puzzles and hiding from
-                                the monster.</p>
-                        </div>
+                <div class="card h-100 bg-dark text-white"
+                    onclick="openGameModal('You`re The Prey', 'YTP Icon.png', 
+                ['music/YTP/bgm mainmenu.mp3', 'music/YTP/bgm shop.mp3', 'music/YTP/ingame ambience.mp3', 
+                'music/YTP/ingame ambience 2.mp3', 'music/YTP/monster coming 1.mp3', 'music/YTP/monster coming 2.mp3',
+                'music/YTP/monster jamsker 1.mp3', 'music/YTP/monster jamsker 2.mp3', 'music/YTP/swap viewport 1.mp3',
+                'music/YTP/swap viewport 2.mp3', 'music/YTP/swap viewport 3.mp3', 'music/YTP/swap viewport 4.mp3',
+                'music/YTP/bebek mati.mp3', 'music/YTP/monster mati.mp3'], 'https://imfeelingood.itch.io/youre-the-prey')">
+                    <img src="YTP Icon.png" class="card-img-top" alt="Game Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">You're The Prey</h5>
+                        <p class="card-role">Role : Sound Artist</p>
+                        <p class="card-text">They call it "the Thing," but that's only because there's no other way
+                            to describe it. It looks like a duck, it moves like a duck, but one glance and you
+                            know—it’s not a duck. Its beak curls into something that resembles a grin, lined with
+                            teeth so sharp they look more like slivers of broken glass. Its eyes… a searing red,
+                            hollow, as if peering straight into you, lingering too long.</p>
                     </div>
-                </a>
+                </div>
             </div>
+
+
 
             <!-- Game Card 2 -->
             <div class="col-md-4 mb-4">
-                <a href="https://imfeelingood.itch.io/youre-the-prey" target="_blank" class="card-link">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="YTP icon.png" class="card-img-top" alt="Game Image 2">
-                        <div class="card-body">
-                            <h5 class="card-title">You're The Prey</h5>
-                            <p class="card-role">Role : Sound Artist</p>
-                            <p class="card-text">They call it "the Thing," but that's only because there's no other way
-                                to describe it. It looks like a duck, it moves like a duck, but one glance and you
-                                know—it’s not a duck. Its beak curls into something that resembles a grin, lined with
-                                teeth so sharp they look more like slivers of broken glass. Its eyes… a searing red,
-                                hollow, as if peering straight into you, lingering too long.</p>
-                        </div>
+                <div class="card h-100 bg-dark text-white"
+                    onclick="openGameModal('Everything About Nightmare', 'EAN Icon.png', 
+                ['music/EAN/bgm main menu.wav', 'music/EAN/monster scream.mp3', 'music/EAN/note.mp3',
+                'music/EAN/note2.mp3', 'music/EAN/note3.mp3', 'music/EAN/note4.mp3', 'music/EAN/note5.mp3'], 'https://okelahiniaja.itch.io/everything-about-nightmare')">
+                    <img src="EAN Icon.png" class="card-img-top" alt="Game Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Everything About Nightmare</h5>
+                        <p class="card-role">Role : Programmer & Sound Artist</p>
+                        <p class="card-text">Tells the story of a little girl named Alita who was initially sleeping
+                            in her room, but in a semi-conscious state, she was suddenly kidnapped by a large and
+                            scary monster. Without knowing what happened, Alita suddenly woke up in a dark house,
+                            requiring Alita to get out of the house by going through several puzzles and hiding from
+                            the monster.</p>
                     </div>
-                </a>
+                </div>
             </div>
 
             <!-- Game Card 3 -->
             <div class="col-md-4 mb-4">
-                <a href="https://youtu.be/0WZ9cRmYntw" target="_blank" class="card-link">
-                    <div class="card h-100 bg-dark text-white">
-                        <img src="AOP Icon.png" class="card-img-top" alt="Game Image 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Ashes Of Polyhymnia</h5>
-                            <p class="card-role">Role : Programmer & Sound Artist</p>
-                            <p class="card-text">Tells the story of a group of musicians in the post-modern era who feel
-                                that the world seems empty and happiness is hard to attain. This group of musicians
-                                shares a common goal: to bring color and joy to the world. However, they face challenges
-                                in doing so, as depression has taken over a large part of society. As a result, they
-                                travel back in time with a mission to prevent the sadness and emptiness that will engulf
-                                the future by performing classic songs.</p>
-                        </div>
+                <div class="card h-100 bg-dark text-white"
+                    onclick="openGameModal('Ashes of Polyhymnia', 'AOP icon.png', 
+                ['music/AOP/quickplay x.mp3', 'music/AOP/main menu 1.mp3', 'music/AOP/main menu 2.mp3', 'music/AOP/main menu 3.mp3', 
+                'music/AOP/quickplay 1.mp3', 'music/AOP/quickplay 2.mp3', 'music/AOP/quickplay 3.mp3', 'music/AOP/quickplay x.mp3', 
+                'music/AOP/splash screen.mp3', 'music/AOP/stage 1.mp3', 'music/AOP/track tutorial.mp3'], 'https://youtu.be/0WZ9cRmYntw')">
+                    <img src="AOP Icon.png" class="card-img-top" alt="Game Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Ashes of Polyhymnia</h5>
+                        <p class="card-role">Role : Programmer & Sound Artist</p>
+                        <p class="card-text">Tells the story of a group of musicians in the post-modern era who feel
+                            that the world seems empty and happiness is hard to attain. This group of musicians
+                            shares a common goal: to bring color and joy to the world. However, they face challenges
+                            in doing so, as depression has taken over a large part of society. As a result, they
+                            travel back in time with a mission to prevent the sadness and emptiness that will engulf
+                            the future by performing classic songs.</p>
                     </div>
-                </a>
+                </div>
             </div>
 
             <!-- Add more game cards as needed -->
         </div>
+
+        <!-- Game Details Modal 1-->
+        <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Everything About Nightmare</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- Main Image -->
+                        <img id="gameModalImage" src="" alt="Game Image" class="img-fluid mb-3" />
+
+                        <!-- Additional Images -->
+                        <div id="gameModalThumbnails" class="d-flex justify-content-center mb-3"></div>
+
+                        <!-- Audio Player Section for Multiple Tracks -->
+                        <div id="gameModalAudioList" class="mb-3">
+                            <!-- Audio tracks will be inserted here dynamically -->
+                        </div>
+
+                        <!-- Link to Game -->
+                        <a id="gameModalLink" href="#" target="_blank" class="btn btn-primary">Play on itch.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Details Modal 2-->
+        <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">You`re The Prey</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- Main Image -->
+                        <img id="gameModalImage" src="" alt="Game Image" class="img-fluid mb-3" />
+
+                        <!-- Additional Images -->
+                        <div id="gameModalThumbnails" class="d-flex justify-content-center mb-3"></div>
+
+                        <!-- Audio Player Section for Multiple Tracks -->
+                        <div id="gameModalAudioList" class="mb-3">
+                            <!-- Audio tracks will be inserted here dynamically -->
+                        </div>
+
+                        <!-- Link to Game -->
+                        <a id="gameModalLink" href="#" target="_blank" class="btn btn-primary">Play on itch.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Details Modal 1-->
+        <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameModalLabel">Ashes of Polyhymnia</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- Main Image -->
+                        <img id="gameModalImage" src="" alt="Game Image" class="img-fluid mb-3" />
+
+                        <!-- Additional Images -->
+                        <div id="gameModalThumbnails" class="d-flex justify-content-center mb-3"></div>
+
+                        <!-- Audio Player Section for Multiple Tracks -->
+                        <div id="gameModalAudioList" class="mb-3">
+                            <!-- Audio tracks will be inserted here dynamically -->
+                        </div>
+
+                        <!-- Link to Game -->
+                        <a id="gameModalLink" href="#" target="_blank" class="btn btn-primary">Play on Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 
@@ -559,6 +670,50 @@
                 navbar.classList.remove('navbar-scrolled');
             }
         });
+
+        function openGameModal(title, image, audioTracks, link) {
+            // Set modal title, image, and link
+            document.getElementById('gameModalLabel').textContent = title;
+            document.getElementById('gameModalImage').src = image;
+            document.getElementById('gameModalLink').href = link;
+
+            // Clear any previous audio tracks in the modal
+            const audioListContainer = document.getElementById('gameModalAudioList');
+            audioListContainer.innerHTML = '';
+
+            // Dynamically create audio controls for each track
+            audioTracks.forEach((audioSrc) => {
+                const audioContainer = document.createElement('div');
+                audioContainer.classList.add('mb-3');
+
+                // Extract and format the filename
+                const fileName = audioSrc.split('/').pop().replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+
+                const audioLabel = document.createElement('p');
+                audioLabel.textContent = fileName;  // Display the formatted filename
+                audioLabel.classList.add('text-warning');
+
+                const audioElement = document.createElement('audio');
+                audioElement.controls = true;
+                audioElement.classList.add('w-100');
+
+                const sourceElement = document.createElement('source');
+                sourceElement.src = audioSrc;
+                sourceElement.type = 'audio/mp3';
+
+                audioElement.appendChild(sourceElement);
+                audioContainer.appendChild(audioLabel);
+                audioContainer.appendChild(audioElement);
+
+                audioListContainer.appendChild(audioContainer);
+            });
+
+            // Show the modal
+            $('#gameModal').modal('show');
+        }
+
+
+
 
     </script>
 
