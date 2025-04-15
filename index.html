@@ -395,11 +395,11 @@
     <section id="track-section" class="container my-5 text-center">
         <div class="container my-5">
             <h2 class="text-center mb-4">Featured Tracks</h2>
-            <div class="row">
+            <div class="row" id="musicTrackList">
                 <!-- Music track cards here as per original content -->
 
                 <!-- Dynamic list of music tracks -->
-                <div class="col-md-4 mb-4">
+                <!-- <div class="col-md-4 mb-4">
                     <div class="card h-100 bg-dark">
                         <div class="card-body">
                             <h5 class="card-title text-white">Mystery Intro</h5>
@@ -589,7 +589,7 @@
                             </audio>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Button at the bottom -->
                 <div class="col-md-4 mb-4 d-flex align-items-center justify-content-center">
@@ -718,6 +718,34 @@
             $('#gameModal').modal('show');
         }
 
+        fetch('tracks.json')
+            .then(response => response.json())
+            .then(audioFiles => {
+                const container = document.getElementById('musicTrackList');
+
+                audioFiles.forEach(audioSrc => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4 mb-4';
+
+                    const trackName = audioSrc.split('/').pop().replace(/\.[^/.]+$/, '').replace(/[_-]/g, ' ');
+
+                    card.innerHTML = `
+                    <div class="card h-100 bg-dark">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">${trackName}</h5>
+                            <audio controls loop class="w-100">
+                                <source src="${audioSrc}" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(err => {
+                console.error('Error loading tracks:', err);
+            });
 
 
 
